@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
+    <title>TicketFlow - Ticket Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .animate-slide-in {
+            animation: slide-in 0.3s ease-out;
+        }
+        .toast {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    {% if successMessage %}
+    <div class="toast animate-slide-in bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span>{{ successMessage }}</span>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.toast').style.display = 'none';
+        }, 3000);
+    </script>
+    {% endif %}
+
+    {% if errorMessage %}
+    <div class="toast animate-slide-in bg-red-500 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <span>{{ errorMessage }}</span>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.toast').style.display = 'none';
+        }, 3000);
+    </script>
+    {% endif %}
+
+    {% if page == 'landing' %}
+        {% include 'pages/landing.twig' %}
+    {% elseif page == 'login' %}
+        {% include 'pages/login.twig' %}
+    {% elseif page == 'signup' %}
+        {% include 'pages/signup.twig' %}
+    {% elseif page == 'dashboard' %}
+        {% include 'pages/dashboard.twig' %}
+    {% elseif page == 'tickets' %}
+        {% include 'pages/tickets.twig' %}
+    {% endif %}
+
+</body>
+</html>

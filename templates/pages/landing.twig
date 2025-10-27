@@ -1,0 +1,119 @@
+<div class="min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold text-indigo-600">TicketFlow</div>
+                <div class="hidden md:flex gap-4">
+                    <a href="index.php?page=login" class="px-6 py-2 text-indigo-600 hover:text-indigo-700 font-medium">
+                        Login
+                    </a>
+                    <a href="index.php?page=signup" class="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium">
+                        Get Started
+                    </a>
+                </div>
+                <button onclick="toggleMobileMenu()" class="md:hidden">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="index.php?page=login" class="block w-full text-left px-4 py-2 text-indigo-600 hover:bg-gray-50">
+                    Login
+                </a>
+                <a href="index.php?page=signup" class="block w-full text-left px-4 py-2 text-indigo-600 hover:bg-gray-50">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-gradient-to-br from-indigo-600 to-purple-700 text-white overflow-hidden">
+        <div class="absolute top-10 right-10 w-64 h-64 bg-white opacity-10 rounded-full"></div>
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Manage Tickets Effortlessly
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-indigo-100">
+                    Streamline your support workflow with our powerful ticket management system
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.php?page=signup" class="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 font-semibold text-lg">
+                        Get Started Free
+                    </a>
+                    <a href="index.php?page=login" class="px-8 py-4 bg-indigo-500 text-white rounded-lg hover:bg-indigo-400 font-semibold text-lg border-2 border-white">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+        <svg class="absolute bottom-0 w-full" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path fill="#f9fafb" d="M0,64 C240,96 480,112 720,96 C960,80 1200,48 1440,64 L1440,120 L0,120 Z"/>
+        </svg>
+    </div>
+
+    <!-- Features Section -->
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            Why Choose TicketFlow?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-green-600">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Easy Ticket Creation</h3>
+                <p class="text-gray-600">
+                    Create and assign tickets in seconds with our intuitive interface
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-blue-600">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Real-time Updates</h3>
+                <p class="text-gray-600">
+                    Track ticket status and updates in real-time across your team
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-purple-600">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        <polyline points="7 3 7 8 15 8"></polyline>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Organized Workflow</h3>
+                <p class="text-gray-600">
+                    Keep your support workflow organized and efficient
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2025 TicketFlow. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+    }
+</script>

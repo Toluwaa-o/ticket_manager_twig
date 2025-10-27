@@ -1,0 +1,38 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (for Tailwind)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tailwind build cache/output
+public/output.css
+public/output.css.map
+
+# PHP Composer
+/vendor/
+composer.lock
+
+# Environment and config
+.env
+.env.local
+.env.*.local
+config.php
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+
+# Temporary or cache files
+cache/
+tmp/
+*.tmp
